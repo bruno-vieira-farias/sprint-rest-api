@@ -1,0 +1,13 @@
+POST http://localhost:8080/api/rest/cliente
+Content-Type: application/json
+
+{
+  "nome":"Bruno Farias",
+  "email": "contato.brunofarias@gmail.com",
+  "cpf": "123456",
+  "dataNascimento":"1986-01-21"
+}
+
+###
+
+
