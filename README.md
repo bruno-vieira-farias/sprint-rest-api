@@ -12,6 +12,7 @@ Exemplo de uma API Rest com Java.
 - Qual banco de dados.
 - Properties
 
-docker run --name postgresql-container -p 5432:5432 -e POSTGRES_PASSWORD=myPassword -d postgres
+docker run --name postgresql-container -p 5432:5432 -e POSTGRES_PASSWORD=tt@aec -d postgres
 Uso do postman
 
+-Validar se de fato usarei o bean validation.

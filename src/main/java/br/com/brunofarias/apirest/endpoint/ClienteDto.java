@@ -1,4 +1,5 @@
-package br.com.brunofarias.apirest.controller;
+package br.com.brunofarias.apirest.endpoint;
+
 
 import java.time.LocalDate;
 
