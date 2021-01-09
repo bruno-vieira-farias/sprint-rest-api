@@ -1,4 +1,4 @@
-package br.com.brunofarias.apirest.endpoint;
+package br.com.brunofarias.meubanco.endpoint;
 
 import java.util.List;
 

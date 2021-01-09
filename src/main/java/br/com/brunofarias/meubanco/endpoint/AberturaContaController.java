@@ -1,7 +1,7 @@
-package br.com.brunofarias.apirest.endpoint;
+package br.com.brunofarias.meubanco.endpoint;
 
-import br.com.brunofarias.apirest.domain.AberturaContaService;
-import br.com.brunofarias.apirest.domain.core.Cliente;
+import br.com.brunofarias.meubanco.domain.AberturaContaService;
+import br.com.brunofarias.meubanco.domain.core.Cliente;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -42,6 +42,11 @@ public class AberturaContaController {
                 .collect(Collectors.toList());
 
         return new ResponseEntity(new RespostaErroDto(codigosErro), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<RespostaErroDto> capturaValidacoesBeanValidation(IllegalArgumentException ex) {
+        return new ResponseEntity(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
 }

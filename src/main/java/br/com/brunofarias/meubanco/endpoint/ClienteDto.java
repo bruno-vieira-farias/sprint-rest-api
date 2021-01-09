@@ -1,39 +1,28 @@
-package br.com.brunofarias.apirest.domain.core;
+package br.com.brunofarias.meubanco.endpoint;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Past;
 import java.time.LocalDate;
 import java.util.Objects;
 
-@Entity
-public class Cliente {
+public class ClienteDto {
 
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Integer id;
+    @NotBlank(message = "NOME_NAO_INFORMADO")
     private String nome;
+    @Email(message = "EMAIL_INVALIDO")
     private String email;
+    @NotBlank(message = "CPF_NAO_INFORMADO.")
     private String cpf;
+    @Past(message = "DATA_NASCIMENTO_INVALIDA.")
     private LocalDate dataNascimento;
 
-    public Cliente() {
-    }
-
-    public Cliente(String nome, String email, String cpf, LocalDate dataNascimento) {
+    public ClienteDto(@NotBlank(message = "NOME_NAO_INFORMADO") String nome, @Email(message = "EMAIL_INVALIDO") String email, @NotBlank(message = "CPF_NAO_INFORMADO.") String cpf, @Past(message = "DATA_NASCIMENTO_INVALIDA.") LocalDate dataNascimento) {
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getNome() {
@@ -72,12 +61,12 @@ public class Cliente {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Cliente cliente = (Cliente) o;
-        return Objects.equals(cpf, cliente.cpf);
+        ClienteDto that = (ClienteDto) o;
+        return Objects.equals(nome, that.nome) && Objects.equals(email, that.email) && Objects.equals(cpf, that.cpf) && Objects.equals(dataNascimento, that.dataNascimento);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cpf);
+        return Objects.hash(nome, email, cpf, dataNascimento);
     }
 }

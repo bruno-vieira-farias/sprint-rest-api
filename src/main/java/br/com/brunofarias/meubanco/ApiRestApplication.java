@@ -1,4 +1,4 @@
-package br.com.brunofarias.apirest;
+package br.com.brunofarias.meubanco;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

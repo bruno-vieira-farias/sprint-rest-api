@@ -1,4 +1,4 @@
-package br.com.brunofarias.apirest.apirest;
+package br.com.brunofarias.meubanco.apirest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
