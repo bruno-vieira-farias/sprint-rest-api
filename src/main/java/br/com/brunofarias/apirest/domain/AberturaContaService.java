@@ -8,17 +8,17 @@ import javax.transaction.Transactional;
 import java.time.LocalDate;
 
 @Service
-public class ClienteServiceImp implements ClienteService {
+public class AberturaContaService {
     private final ClienteRepository clienteRepository;
 
-    public ClienteServiceImp(ClienteRepository clienteRepository) {
+    public AberturaContaService(ClienteRepository clienteRepository) {
         this.clienteRepository = clienteRepository;
     }
 
     @Transactional
-    @Override
     public Cliente cadastraCliente(String nome, String email, String cpf, LocalDate dataNascimento) {
         Cliente cliente = new Cliente(nome, email, cpf, dataNascimento);
         return clienteRepository.save(cliente);
     }
+
 }
