@@ -418,4 +418,4 @@ E uma com erro.
 
 
 É isso ai, missão dada é missão cumprida. Ah! O código está disponível em https://github.com/bruno-vieira-farias/sprint-rest-api.git. 
-Te espero por lá e até breve.
+Te espero por lá.
