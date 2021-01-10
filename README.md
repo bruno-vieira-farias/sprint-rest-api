@@ -347,7 +347,7 @@ public class Cliente {
 }
 ```
 
-####Classe ClienteRepository
+#### Classe ClienteRepository
 
 Ao extender o CrudRepository o Spring já implementa uma série de metodos úteis como save e findById por exemplo, e para nossas validações de cpf e email criamos os métodos `existsByCpf` e `existsByEmail` que apenas ao usar a nomeclura do CrudRepository, já teremos o método "magicamente" implementado.
 ```java
