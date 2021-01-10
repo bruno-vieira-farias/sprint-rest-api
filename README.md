@@ -407,6 +407,7 @@ public class AberturaContaService {
 ```
 
 Para termos uma visão geral da distribuição de nossos arquivos, temos:
+
 ![](doc/images/estruturaPastas.PNG)
 
 Certo, temos então uma requisção em caso de sucesso.
